@@ -43,11 +43,13 @@ console.log(exampleStringWrapper.toUpperCase()); //output - "THIS IS A STRING"
 
 /* 2. Object Data Types  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 
- Object (is the main data type that is an object
-
+ Object - is the main data type that is an object and all of the following are Prototypes of Object)
   Function
   Array
   Date
   RegExp
   Error
+
+
+ Obj
 */
