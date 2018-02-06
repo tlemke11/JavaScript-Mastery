@@ -1,7 +1,16 @@
-//Here we will go over the basic assignment declaration statements and scope
+//There are 4 declarations in Javascript - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements
 
-//There are 4 assignment statements in javascript
 
+badNews = true;           // undeclare variable = Globally scoped - forgetting to properly declare variables is a no-no
 var locallyScoped = true; // A Variable - Locally scoped
-let blockScoped = true;   // A Variable that is block scoped - Only available in ECMAScript 6(ES2015)
+let blockScoped = true;   // A Variable - Block scoped - Only available in ECMAScript 6(ES2015)
+const pi = 3.14;          // A Variable that cannot be reassigned/redeclared - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 
+
+//undeclared variables
+
+//var
+
+//let
+
+//const
