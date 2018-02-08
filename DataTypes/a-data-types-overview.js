@@ -49,7 +49,4 @@ console.log(exampleStringWrapper.toUpperCase()); //output - "THIS IS A STRING"
   Date
   RegExp
   Error
-
-
- Obj
 */
