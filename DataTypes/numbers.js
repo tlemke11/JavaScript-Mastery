@@ -12,7 +12,8 @@ positive and negative infinity
 
 //Ok, so what does all of this mean in code?
 //Basically, double-precision numbers do funny things when they are rounded and can cause issues with any fraction
-
+//To solve this in ES6(http://2ality.com/2015/04/numbers-math-es6.html#numberepsilon)
+//To solve this in ES5+
 var doublePrecisionConfusion = 0.1 + 0.2;
 if (doublePrecisionConfusion === 0.3){
     console.log("You would expect this to show;")
@@ -45,4 +46,6 @@ console.log("You can catch the NaNs with the isNaN function " + isNaN(parseInt("
 
 //TODO - expand explaination of double-precision 64-bit binary format IEEE 754 -
 // https://en.wikipedia.org/wiki/Double-precision_floating-point_format
+// https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+// http://floating-point-gui.de/
 
