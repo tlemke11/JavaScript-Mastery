@@ -22,7 +22,7 @@ else {
     console.log("But instead, the confusing truth is revealed. 0.1 + 0.2 = " + doublePrecisionConfusion) //0.3000...4
 }
 
-
+// - NaN
 //What about this NaN nonsense? What is all that about?
 //NaN numbers are the result of "floating point" exceptions and can be thrown when invalid operations or non-numbers
 //are used during calculations or if you try to cast a non-number as a number (i.e. parseInt() and parseFloat())
@@ -32,12 +32,30 @@ else {
 var NaN = "this is not a number" + 2;
 console.log(NaN);
 
-console.log("casting a string to a number makes it a...? " + parseInt("NaN"));
+console.log("casting a string to a number makes it a...? " + parseInt("NaN", 10)); //always specify base with parseInt
 
-console.log("You can catch the NaNs with the isNaN function " + isNaN(parseInt("NaN")) + ", you caught a NaN Pokemon!");
+console.log("You can catch the NaNs with the isNaN function " + isNaN(parseInt("NaN", 10 )) + ", you caught a NaN Pokemon!");
 
+// - Infinity and Negative Infinity
 //But what about infinity? Why is that there?
+//Heads First Javascript (goo.gl/sUqwdb) Explains that when a number exceeds the upper or
+//lower limits of the float, it turns into infinity. You can check your numbers by doing
+//the following to make sure that that your numbers haven't gone AWOL
 
+var numberGoneAWOL = 1 / 0;
+if (numberGoneAWOL === Infinity){
+    console.log("We've got a man down, sir.");
+}
+
+console.log("Any number divided by infinity is : " + 10/Infinity);
+
+console.log("And you can get -Infinity if you really really want to: " + Math.log(0));
+
+console.log("Infinity is technically " +  1.7976931348623157E+10308 + "or higher numbers");
+console.log(" -Infinity is technically" +  -1.7976931348623157E+10308 + "or lower numbers");
+
+//for more info see
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 
 
 
