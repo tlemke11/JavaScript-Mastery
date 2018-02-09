@@ -58,7 +58,8 @@ console.log(" -Infinity is technically" +  -1.7976931348623157E+10308 + "or lowe
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 
 
-
+// - Testing for Infinity, -Infinity, and NaN
+console.log("is it finite?" + isFinite(Infinity) + isFinite (-Infinity) + isFinite(NaN));
 
 
 
