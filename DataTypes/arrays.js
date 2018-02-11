@@ -22,3 +22,13 @@ exampleArray.toString(); // returns '1,2,3,4'
 
 //filter() - filter every item that matches callback function -TODO explain better and more examples
 exampleArray.filter(function(number) {return number === 1;}); //return 1 since this matches the filter
+
+//join() - same as toString , but concats with a chosen modifier
+exampleArray.join(' '); // return '1 2 3'
+
+//splice() - delete one or more array items and replaces them with the provided value
+example.Array.splice(1, 1, 1); // returns [1, 1, 3] //TODO double check this output
+
+//forEach() -
+
+//concat() -
