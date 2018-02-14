@@ -6,7 +6,7 @@
 //The Most useful Array Functions
 //http://vegibit.com/most-useful-javascript-array-functions/
 
-var exampleArray = [1, 2, 3];
+var exampleArray = [1, 2, 3]; //imagine that this is initialized before each call below
 
 //push() - append items to end of array
 exampleArray.push(4); // Array now contains [1, 2, 3, 4]
@@ -37,4 +37,16 @@ exampleArray.splice(0, 2, 55); // returns [1, 2] and makes exampleArray [55, 3]
 //}[, thisArg])
 exampleArray.forEach(callbackFunction);
 
-//concat() -
+//concat() - add elements from another array and returns a NEW array
+var array2 = [9 , 10 , 11];
+var array3 = exampleArray.concat(array2); //returns [1, 2, 3, 9, 10, 11]
+
+//shift() - similar to popBack - returns the first element in array, removes it, and shifts all other elements over
+exampleArray.shift() // returns 1 and exampleArray is now [2 , 3]
+
+//unshift - pushes an element to the front of array and shifts all others over
+exampleArray.unshift(0); //exampleArray is now [0, 1, 2, 3]
+
+//map() - similar to forEach but returns new array of same length
+var newArray = exampleArray.map( x => x * 3);  // newArray has [3, 6, 9] (ES2015)
+
