@@ -1,5 +1,8 @@
 //TODO - Add array background and other information
 
+//TODO - include standard usages for things like reduce, forEach, etc.
+
+//TODO - include signatures for each functoin
 
 
 
@@ -11,8 +14,12 @@ var exampleArray = [1, 2, 3]; //imagine that this is initialized before each cal
 //push() - append items to end of array
 exampleArray.push(4); // Array now contains [1, 2, 3, 4]
 
-//indexOf() - return the index of first instance of value found
+//indexOf() - return the index of first instance of value found - starts from beginning of array
+//on no match, returns -1
 exampleArray.indexOf(2); // Returns 1, It would return 1 even if there were multiple 2 values inserted at the end
+
+//lastIndexOf() - return the index of the first index found, starts at end of array
+exampleArray.indexOf(2); //returns 1
 
 //slice() - takes 1 or two arguments that indicate what portion of the array you would like to keep
 exampleArray.slice(1 , 3); // returns [2, 3] - the first value is the index of the first item, second is the index right after end
@@ -50,3 +57,37 @@ exampleArray.unshift(0); //exampleArray is now [0, 1, 2, 3]
 //map() - similar to forEach but returns new array of same length
 var newArray = exampleArray.map( x => x * 3);  // newArray has [3, 6, 9] (ES2015)
 
+//sort() - sort an array using Unicode point value of each character
+//you can also pass in a comparison function
+//see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+anothereArray = [7, 2, 3];
+console.log(anotherArray.sort()); // [2, 3, 7]
+
+//pop() - remove and return last element in array
+exampleArray.pop();// returns 3. exampleArray now is [1,2]
+
+//push() - add element to end of array
+exampleArray.push(4); // exampleArray is now [1,2,3,4]
+
+//reduce()
+//"The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value."
+// from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+console.log(exampleArray.reduce(function(a, b){ return a+b;})); // returns 6
+
+//reduceRight()
+//same as above, but evaluates from last to first element in array
+
+//some() - evaluate if at least one element of the array matches criteria
+function equalsThree(element){
+    return element === 3;
+}
+console.log(exampleArray.some(equalsThree)); // returns true
+
+//every() - evaluate if all elements in array match criteria
+function equalsThree(element){
+    return element === 3;
+}
+console.log(exampleArray.every(equalsThree)); // returns false after evaluating element 0
+
+//reverse() - reverses all elements of original array
+exampleArray.reverse(); //exampleArray is now [3,2,1]
