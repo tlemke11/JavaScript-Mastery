@@ -11,7 +11,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
 //ARITHMATIC OPERATORS
 
 /*
- *  + (Addition)
+ *  '+' (Addition)
  *  Used for addition && string concatenation
  */
 console.log(1 + 2); // returns 3
@@ -19,22 +19,35 @@ console.log(1 + '2'); // returns "12" as a string
 console.log('hello' + 'world'); // returns "helloworld"
 
 /*
- *  - (Subtraction)
+ *  '-' (Subtraction)
  *  Use for subtracting stuff
  */
 console.log(1 - 2); // returns -1
 console.log('number' - 1) // returns NaN
 
 /*
- *  / (Division)
+ *  '/' (Division)
  *  Dividing the first number by the second
  */
 console.log(2 / 4); // returns .5
 
 /*
- *  * (Multiplication)
+ *  '*' (Multiplication)
  *  Multiplying a number
  */
 console.log(2 * 4); // returns 8
 
+
+/*
+ *  '%' (Modulous)
+ *  The remainder after dividing two numbers
+ */
+console.log(5 % 4); // returns `
+
+
+/*
+ *  '**' (Exponentiation Operator)
+ *  Rasing the first number to the exponent of the second
+ */
+console.log(2 ** 4); // returns 16
 
