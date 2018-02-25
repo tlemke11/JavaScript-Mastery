@@ -91,3 +91,9 @@ console.log(exampleArray.every(equalsThree)); // returns false after evaluating 
 
 //reverse() - reverses all elements of original array
 exampleArray.reverse(); //exampleArray is now [3,2,1]
+
+//sort() - sort an array, but like the values are strings
+exampleArray.sort(); // is still [1, 2, 3]
+//to sort them like numbers use the standard sort function
+var exampleArray2 = [1, 11, 9, 10];
+exampleArray2.sort(function(f,l){ return f - l}); // [1, 9, 10, 11]
