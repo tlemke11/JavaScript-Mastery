@@ -7,7 +7,10 @@ let blockScoped = true;   // A Variable - Block scoped - Only available in ECMAS
 const pi = 3.14;          // A Variable that cannot be reassigned/redeclared - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
 
 
-//undeclared variables
+//undeclared variables - undeclared variables become global!
+
+undeclaredVar = "global";
+
 
 //var
 
