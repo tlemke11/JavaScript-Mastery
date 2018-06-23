@@ -1,50 +1,49 @@
-//From Code Fights
+//Help with Idea courtesy of https://codefights.com/profile/exodiquas
+function almostIncreasingSequence(sequence, isTest) {
+        firstValue = sequence[0];
+        removals = 0;
+        index = 0;
+        while(index < sequence.Length && removals <= 1){
 
-//Check sequence[] to see if you can remove just one element in order
-//to have an increasing sequence
-//
-//i.e. [1, 2, 4, 3, 4, 5] is true because if you remove just the 4 you have
-//an increasing sequence
-
-function almostIncreasingSequence(sequence) {
-
-let i = 0;
-let j = 1;
-let currentSequenceNumber = null;
-let removeCounter = 0;
-
-if (sequence[i] >= sequence[j] || (sequence[i] + 1 != sequence[j])){
-    i++;
-    j++;
-    removeCounter++;
+        }
+    if(!isTest){
+        runTests();
+    }
 }
 
-console.log(removeCounter);
-while((j <= sequence.length) && (removeCounter <= 1) && sequence.length > 3){
 
-    if(currentSequenceNumber === sequence[i] || currentSequenceNumber === sequence[j]){
+//Unit Tests
+function runTests(){
+    console.log("TestRunner");
+    testArray = [
+        {
+        'testName': 'simpleSequenceOneTwoThree',
+        'testValues': [1,2,3]
+        }
+                ];
+    failedTests = 0;
+
+    for (var i = 0; i < testArray.length; i++){
+         if(!testIncreasingSequence(testArray[0].testValues,testArray[0].testName)){
+             failedTests++;
+         };
+    }
+
+    if(failedTests != 0){
+        console.log(failedTests + " Test(s) Failed")
+    } else {
+        console.log("All Tests Passed")
+    }
+
+
+}
+
+function testIncreasingSequence(testSequence, testName){
+    if (almostIncreasingSequence(testSequence, true)){
+        console.log(testName + "Passed");
+        return true;
+    } else {
+        console.log(testName + "Failed")
         return false;
     }
-    console.log("this is i: " + i + " " + "and this is j: " + j)
-    if(sequence[i] >= sequence[j] || (sequence[i] + 1 != sequence[j]))  {
-        removeCounter++;
-        currentSequenceNumber = sequence[j];
-        j++;
-    } else {
-    currentSequenceNumber = sequence[j];
-    i += 2;
-    j += 2;
-    }
 }
-
-if(removeCounter > 1){
-    return false;
-}
-
-return true;
-}
-
-
-//Aglorithm
-//
-//
