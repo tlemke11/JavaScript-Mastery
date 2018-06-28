@@ -4,9 +4,12 @@ function almostIncreasingSequence(sequence, isTest) {
     firstIndex = 0;
     secondIndex = 1;
     while(firstIndex < sequence.Length && removals <= 1){
-            if(sequence[firstIndex] < sequence[secondIndex]){
+            if(sequence[firstIndex] <= sequence[secondIndex]){
                 removals++;
                 sequence.splice(secondIndex,1);
+            } else if(sequence[firstIndex] >= sequence[secondIndex]){
+                removals++;
+                sequence.splice(firstIndex,1);
             } else {
                 firstIndex++;
                 secondIndex++;
@@ -15,8 +18,7 @@ function almostIncreasingSequence(sequence, isTest) {
 if(!isTest){
     runTests();
 }
-return false;
-//return (removals < 2);
+return (removals < 2);
 }
 
 //Unit Tests
@@ -27,9 +29,14 @@ var testArray = [
     'assert': true
     },
 {
-    'testName': 'Sequence 1,3,2,1 Asserts True',
-    'testValues': [1,3,2,1],
+    'testName': 'Sequence 1,3,2 Asserts True',
+    'testValues': [1,3,2],
     'assert': true
+},
+{
+    'testName': 'Sequence 1,3,2,1 Asserts False',
+    'testValues': [1,3,2,1],
+    'assert': false
 }
 ];
 
@@ -39,7 +46,7 @@ console.log("TestRunner");
 failedTests = 0;
 
 for (var i = 0; i < testArray.length; i++){
-     if(almostIncreasingSequence(testArray[i].testValues,testArray[i].testName) != testArray[i].assert){
+     if(almostIncreasingSequence(testArray[i].testValues,true) != testArray[i].assert){
          failedTests++;
          console.log(testArray[i].testName + " FAILED!!");
      } else {
