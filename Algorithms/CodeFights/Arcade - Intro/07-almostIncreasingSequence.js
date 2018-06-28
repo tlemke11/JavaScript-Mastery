@@ -3,10 +3,11 @@ function almostIncreasingSequence(sequence, isTest) {
     removals = 0;
     firstIndex = 0;
     secondIndex = 1;
-    while(firstIndex < sequence.Length && removals <= 1){
+    while(firstIndex < sequence.length){
             if(sequence[firstIndex] <= sequence[secondIndex]){
                 removals++;
                 sequence.splice(secondIndex,1);
+                console.log(sequence[firstIndex] + " " + sequence[secondIndex] + "hit if")
             } else if(sequence[firstIndex] >= sequence[secondIndex]){
                 removals++;
                 sequence.splice(firstIndex,1);
